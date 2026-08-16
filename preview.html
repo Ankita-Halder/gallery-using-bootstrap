@@ -7,7 +7,22 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Your hover CSS -->
+
+    <style>
+    .preview-image {
+        width: 800px;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    @media (max-width: 576px) {
+        .preview-image {
+            width: 90%;
+            height: 450px;
+        }
+    }
+</style>
+    
     
     <title>Preview - CodeNest</title>
   </head>
@@ -34,74 +49,58 @@
  class="carousel slide mt-5 mb-4" 
  data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active"> 
-    <img src="1.jpg" 
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 1"> 
+    <div class="carousel-item active">
+    <img src="1.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 1">
 </div>
 
-
-<div class="carousel-item"> 
-    <img src="2.jpg" 
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 2"> 
+<div class="carousel-item">
+    <img src="2.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 2">
 </div>
 
-
-<div class="carousel-item"> 
-    <img src="3.jpg" 
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 3"> 
+<div class="carousel-item">
+    <img src="3.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 3">
 </div>
 
-
-<div class="carousel-item"> 
-    <img src="4.jpg"  
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 4"> 
+<div class="carousel-item">
+    <img src="4.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 4">
 </div>
 
-    <div class="carousel-item "> 
-    <img src="5.jpg" 
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 5"> 
+<div class="carousel-item">
+    <img src="5.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 5">
 </div>
 
-
-<div class="carousel-item"> 
-    <img src="6.jpg" 
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 6"> 
+<div class="carousel-item">
+    <img src="6.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 6">
 </div>
 
-
-<div class="carousel-item"> 
-    <img src="7.jpg" 
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 7"> 
+<div class="carousel-item">
+    <img src="7.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 7">
 </div>
 
-
-<div class="carousel-item "> 
-    <img src="8.jpg"  
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 8"> 
+<div class="carousel-item">
+    <img src="8.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 8">
 </div>
 
-
-<div class="carousel-item "> 
-    <img src="9.jpg"  
-         class="d-block mx-auto"  
-         style="width: 65%; height: 800px; object-fit: cover;" 
-         alt="Image 9"> 
+<div class="carousel-item">
+    <img src="9.jpg"
+         class="d-block mx-auto preview-image"
+         alt="Image 9">
 </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
