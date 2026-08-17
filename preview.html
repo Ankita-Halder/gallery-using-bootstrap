@@ -21,6 +21,8 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
 
@@ -54,27 +56,19 @@
         }
 
     }
-
-
-    /* =========================
-       PREVIEW SECTION
-    ========================= */
-
     .preview-section {
-        width: 100%;
-        height: calc(100vh - 116px);
+    width: 100%;
+    flex: 1;
+    min-height: 0;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        overflow: hidden;
-    }
+    overflow: hidden;
+}
 
-
-    /* =========================
-       CAROUSEL
-    ========================= */
+ 
 
     #carouselExampleControls {
         width: 100%;
@@ -117,6 +111,7 @@
     .preview-footer {
         width: 100%;
         height: 58px;
+        min-height: 58px;
         position: relative;
     }
 
@@ -186,61 +181,42 @@
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 576px) {
 
-        .preview-nav {
-            height: 58px;
-            padding: 0 15px !important;
-        }
-
-        .preview-section {
-            height: calc(100vh - 116px);
-        }
-
-        .preview-image {
-            width: 90%;
-
-            /* Space above and below on phone */
-            height: calc(100% - 20px);
-
-            max-width: 90%;
-
-            object-fit: cover;
-
-            margin: 10px auto;
-        }
-
-        .preview-footer {
-            height: 58px;
-        }
-
-        .preview-footer .container {
-            height: 58px;
-            padding: 0 10px;
-        }
-
-        .preview-footer .copyright {
-            font-size: 12px;
-        }
-
-        .preview-footer .back-to-top {
-            right: 10px;
-        }
-
-        .preview-footer .back-to-top a {
-            font-size: 10px;
-        }
+    .preview-nav {
+        height: 58px;
+        padding: 0 15px !important;
     }
 
+    .preview-image {
+        width: 90%;
+        height: 100%;
+        max-width: 90%;
+        object-fit: cover;
+    }
 
-    /* =========================
-       VERY SMALL PHONES
-    ========================= */
+    .preview-footer {
+        height: 58px;
+        min-height: 58px;
+    }
 
+    .preview-footer .container {
+        height: 58px;
+    }
+
+    .preview-footer .copyright {
+        font-size: 12px;
+    }
+
+    .preview-footer .back-to-top {
+        right: 10px;
+    }
+
+    .preview-footer .back-to-top a {
+        font-size: 12px;
+    }
+}
     @media (max-width: 400px) {
 
         .preview-footer .copyright {
