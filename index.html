@@ -1,289 +1,474 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+<style>
+     body {
+        overflow-x: hidden !important;
+    }
+    
+    .card {
+        height: 470px;
+        overflow: hidden;
+    }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Your hover CSS -->
-    <style>
-        img {
-            transition: transform 0.3s ease;
+
+    .image-container {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+
+    .image-container:hover img {
+        transform: scale(1.05);
+    }
+
+    .card-body {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-text {
+        margin-bottom: 10px;
+    }
+    footer {
+            height: 58px;
         }
 
-        img:hover {
-            transform: scale(1.05);
+        footer .container {
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
         }
-    </style>
 
+        .footer .copyright {
+    margin: 0;
+}
+
+
+.footer .back-to-top {
+    position: absolute;
+    right: 15px;
+    margin: 0;
+}
+
+</style>
+    
 
     <title>Gallery</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #0d1b2a; padding:18px 35px">
-  <a class="navbar-brand" href="#">CodeNest</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="preview.html">Preview</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+</head>
+
+<body>
 
 
+    <nav class="navbar navbar-expand-lg navbar-dark"
+         style="background-color: #0d1b2a; padding: 18px 35px;">
 
-<div class="container-fluid px-2">
-    <div class="row">
-        <!-- CARD 1 -->
-        <div class="col-md-4 mt-3">
-            <div class="card mb-4 shadow-sm">
+        <a class="navbar-brand" href="#">
+            Gallery
+        </a>
 
-                <img src="1.jpg" class="card-img-top" height="350" style="object-fit: cover; transform: transfrom 0.3 ease;" alt="Image">
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-                <div class="card-body">
-                    <p class="card-text">
-                        A breathtaking green mountain covered in mist, with beautiful waterfalls flowing down its rocky slopes.
-                        
-                    </p>
+            <span class="navbar-toggler-icon"></span>
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+
+                    <a class="nav-link" href="#">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="preview.html">
+                        Preview
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="container-fluid px-2">
+
+        <div class="row">
+
+            <div class="col-md-4 mt-3 ">
+
+                <div class="card mb-4 shadow-sm h-90">
+
+                    <div class="image-container">
+
+                        <img src="1.jpg"
+                             alt="Mountain Image 1">
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            A breathtaking green mountain covered in mist,
+                            with beautiful waterfalls flowing down its rocky slopes.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
-        </div>
 
 
-        <!-- CARD 2 -->
-        <div class="col-md-4 mt-3">
-            <div class="card mb-4 shadow-sm">
+            <div class="col-md-4 mt-3">
 
-                <img src="2.jpg" class="card-img-top" height="350"  style="object-fit: cover;" alt="Image">
+                <div class="card mb-4 shadow-sm h-90">
 
-                <div class="card-body">
-                    <p class="card-text">
-                        A serene mountain landscape surrounded by crystal-clear water, green forests, and dramatic peaks beneath a blue sky.
-                    </p>
+                    <div class="image-container">
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <img src="2.jpg"
+                             alt="Mountain Image 2">
+
+                    </div>
+
+
+                    <div class="card-body ">
+
+                        <p class="card-text">
+                            A serene mountain landscape surrounded by
+                            crystal-clear water, green forests, and dramatic peaks
+                            beneath a blue sky.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
-        </div>
-        
-        <!-- CARD 3 -->
-        <div class="col-md-4 mt-3">
-            <div class="card mb-4 shadow-sm">
 
-                 <img src="3.jpg" class="card-img-top" height="350"  style="object-fit: cover;" alt="Image">
-                <div class="card-body">
-                    <p class="card-text">
-                        A stunning view of a lush mountain valley filled with greenery, clouds, and peaceful natural scenery.
-                    </p>
+            <div class="col-md-4 mt-3">
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                <div class="card mb-4 shadow-sm h-90">
+
+                    <div class="image-container">
+
+                        <img src="3.jpg"
+                             alt="Mountain Image 3">
+
+                    </div>
+
+
+                    <div class="card-body ">
+
+                        <p class="card-text">
+                            A stunning view of a lush mountain valley filled
+                            with greenery, clouds, and peaceful natural scenery.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
-        </div>
 
-        <!-- CARD 4 -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
 
-                 <img src="4.jpg" class="card-img-top" height="350" style="object-fit: cover;" alt="Image">
+            <div class="col-md-4">
 
-                <div class="card-body">
-                    <p class="card-text">
-                        Towering mountain peaks rise above the landscape, creating a spectacular view of nature's beauty.
-                    </p>
+                <div class="card mb-4 shadow-sm h-90">
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <div class="image-container">
+
+                        <img src="4.jpg"
+                             alt="Mountain Image 4">
+
+                    </div>
+
+
+                    <div class="card-body ">
+
+                        <p class="card-text">
+                            Towering mountain peaks rise above the landscape,
+                            creating a spectacular view of nature's beauty.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
-        </div>
 
 
-        <!-- CARD 5-->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+            <div class="col-md-4">
 
-                 <img src="5.jpg" class="card-img-top" height="350" style="object-fit: cover;" alt="Image">
-                
-                 <div class="card-body">
-                    <p class="card-text">
-                        Thick clouds and mist surround the mountains, creating a calm and mysterious atmosphere.
-                    </p>
+                <div class="card mb-4 shadow-sm h-90">
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <div class="image-container">
+
+                        <img src="5.jpg"
+                             alt="Mountain Image 5">
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            Thick clouds and mist surround the mountains,
+                            creating a calm and mysterious atmosphere.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
-        </div>
 
-        <!-- CARD 6 -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+            <div class="col-md-4">
 
-                 <img src="6.jpg" class="card-img-top" height="350" style="object-fit: cover;" alt="Image">
+                <div class="card mb-4 shadow-sm h-90">
+
+                    <div class="image-container">
+
+                        <img src="6.jpg"
+                             alt="Mountain Image 6">
+
+                    </div>
 
 
-                <div class="card-body">
-                    <p class="card-text">
-                        Magnificent snow-covered peaks shine beneath the sunlight, offering an unforgettable view of the high mountains.
-                    </p>
+                    <div class="card-body ">
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <p class="card-text">
+                            Magnificent snow-covered peaks shine beneath
+                            the sunlight, offering an unforgettable view
+                            of the high mountains.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
-        </div>
 
-        <!-- CARD 7 -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
 
-                <img src="7.jpg" class="card-img-top" height="350" style="object-fit: cover;" alt="Image">
+            <div class="col-md-4">
 
-                <div class="card-body">
-                    <p class="card-text">
-                        Lush green hills stretch across the horizon, creating a refreshing and peaceful natural landscape.
-                    </p>
+                <div class="card mb-4 shadow-sm h-90">
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <div class="image-container">
+
+                        <img src="7.jpg"
+                             alt="Mountain Image 7">
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            Lush green hills stretch across the horizon,
+                            creating a refreshing and peaceful natural landscape.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
-        </div>
 
 
-        <!-- CARD 8 -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+            <div class="col-md-4">
 
-                <img src="8.jpg" class="card-img-top" height="350" style="object-fit: cover;"  alt="Image">
+                <div class="card mb-4 shadow-sm">
 
-                <div class="card-body">
-                    <p class="card-text">
-                        Water cascades down the rocky mountain slopes while dense greenery surrounds the beautiful scenery.
-                    </p>
+                    <div class="image-container">
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <img src="8.jpg"
+                             alt="Mountain Image 8">
+
+                    </div>
+
+
+                    <div class="card-body ">
+
+                        <p class="card-text">
+                            Water cascades down the rocky mountain slopes
+                            while dense greenery surrounds the beautiful scenery.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
-        </div>
-        
 
-                <!-- CARD 9 -->
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
 
-                <img src="9.jpg" class="card-img-top" height="350"
-                     style="object-fit: cover;" alt="Image">
+            <div class="col-md-4">
 
-                <div class="card-body">
-                    <p class="card-text">
-                        The warm sunlight shines across the mountain peaks,
-                        creating a stunning and peaceful sunset landscape.
-                    </p>
+                <div class="card mb-4 shadow-sm">
 
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-secondary">View</button>
-                            <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <div class="image-container">
+
+                        <img src="9.jpg"
+                             alt="Mountain Image 9">
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            The warm sunlight shines across the mountain peaks,
+                            creating a stunning and peaceful sunset landscape.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+
+                            <small class="text-muted">
+                                9 mins
+                            </small>
+
                         </div>
 
-                        <small class="text-muted">9 mins</small>
                     </div>
+
                 </div>
 
             </div>
+
+
         </div>
 
-    </div> 
+    </div>
+<footer class="bg-dark text-white footer">
 
-</div> 
-    <footer class="container">
-    <p class="float-right">
-        <a href="#">Back to top</a>
-    </p>
+    <div class="container">
 
-    <p>
-        © 2020-2021 iCoder, Inc. ·
-        <a href="#">Privacy</a> ·
-        <a href="#">Terms</a>
-    </p>
-    </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+        <p class="copyright">
+            © 2020-2021 Gallery, Inc.
+        </p>
+
+        <p class="back-to-top">
+            <a href="#" class="text-white">
+                Back to top
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+   <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+</body>
 </html>
