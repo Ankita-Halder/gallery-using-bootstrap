@@ -12,6 +12,7 @@
 <style>
      body {
         overflow-x: hidden !important;
+    
     }
     
     .card {
@@ -48,27 +49,90 @@
     .card-text {
         margin-bottom: 10px;
     }
-    footer {
-            height: 58px;
-        }
+    /* FOOTER */
 
-        footer .container {
-            height: 58px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 100%;
-        }
-
-        .footer .copyright {
-    margin: 0;
+.footer {
+    height: 58px;
+    width: 100%;
+    position: relative;
 }
 
+.footer .container {
+    height: 58px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.footer .copyright {
+    margin: 0;
+    text-align: center;
+}
 
 .footer .back-to-top {
     position: absolute;
     right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0;
+}
+
+.footer .back-to-top a {
+    white-space: nowrap;
+}
+
+
+/* TABLET + MOBILE */
+
+@media (max-width: 576px) {
+
+    .footer {
+        height: 58px;
+    }
+
+    .footer .container {
+        height: 58px;
+        padding: 0 10px;
+    }
+
+    .footer .copyright {
+        font-size: 12px;
+        padding-right: 80px;
+        white-space: nowrap;
+    }
+
+    .footer .back-to-top {
+        right: 10px;
+    }
+
+    .footer .back-to-top a {
+        font-size: 12px;
+    }
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 400px) {
+
+    .footer .copyright {
+        font-size: 10px;
+        padding-right: 70px;
+    }
+
+    .footer .back-to-top {
+        right: 8px;
+    }
+
+    .footer .back-to-top a {
+        font-size: 10px;
+    }
 }
 
 </style>

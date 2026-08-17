@@ -10,136 +10,250 @@
 
     <style>
 
-        * {
-            box-sizing: border-box;
-        }
+    * {
+        box-sizing: border-box;
+    }
 
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow-x: hidden;
-        }
-.preview-nav {
-    height: 58px;
-    padding: 0 35px !important;
-    position: relative;
-    z-index: 1000;
-}
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
-@media (max-width: 991px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
 
     .preview-nav {
         height: 58px;
-        padding: 0 15px !important;
-    }
-
-    .preview-nav .navbar-collapse {
-        position: absolute;
-        top: 58px;
-        left: 0;
-        width: 100%;
-        background-color: #0d1b2a;
-        padding: 10px 15px;
+        padding: 0 35px !important;
+        position: relative;
         z-index: 1000;
     }
 
-}
-        .preview-section {
-            height: calc(100vh - 116px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        #carouselExampleControls {
-            width: 100%;
-            height: 100%;
+
+    @media (max-width: 991px) {
+
+        .preview-nav {
+            height: 58px;
+            padding: 0 15px !important;
         }
 
-        .carousel-inner {
-            height: 100%;
+        .preview-nav .navbar-collapse {
+            position: absolute;
+            top: 58px;
+            left: 0;
+            width: 100%;
+            background-color: #0d1b2a;
+            padding: 10px 15px;
+            z-index: 1000;
         }
-        .carousel-item {
-            height: 100%;
+
+    }
+
+
+    /* =========================
+       PREVIEW SECTION
+    ========================= */
+
+    .preview-section {
+        width: 100%;
+        height: calc(100vh - 116px);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+
+    /* =========================
+       CAROUSEL
+    ========================= */
+
+    #carouselExampleControls {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* =========================
+       IMAGE
+    ========================= */
+
+    .preview-image {
+        width: 800px;
+
+        /* Creates space above and below */
+        height: calc(100% - 20px);
+
+        max-width: 90%;
+
+        object-fit: cover;
+
+        margin: 10px auto;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .preview-footer {
+        width: 100%;
+        height: 58px;
+        position: relative;
+    }
+
+    .preview-footer .container {
+        width: 100%;
+        max-width: 100%;
+
+        height: 58px;
+        padding: 0 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+    }
+
+
+    /* Copyright */
+
+    .preview-footer .copyright {
+        margin: 0;
+    }
+
+
+    /* Back to top */
+
+    .preview-footer .back-to-top {
+        position: absolute;
+
+        right: 15px;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        margin: 0;
+    }
+
+
+    /* =========================
+       BLACK ARROWS
+    ========================= */
+
+    .carousel-control-prev-icon {
+        background-image: none;
+    }
+
+    .carousel-control-prev-icon::after {
+        content: "‹";
+
+        font-size: 50px;
+        font-weight: bold;
+        color: black;
+    }
+
+
+    .carousel-control-next-icon {
+        background-image: none;
+    }
+
+    .carousel-control-next-icon::after {
+        content: "›";
+
+        font-size: 50px;
+        font-weight: bold;
+        color: black;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 576px) {
+
+        .preview-nav {
+            height: 58px;
+            padding: 0 15px !important;
+        }
+
+        .preview-section {
+            height: calc(100vh - 116px);
         }
 
         .preview-image {
-            width: 800px;
-            height: calc(100vh - 160px);
+            width: 90%;
+
+            /* Space above and below on phone */
+            height: calc(100% - 20px);
+
+            max-width: 90%;
+
             object-fit: cover;
-            margin: auto;
+
+            margin: 10px auto;
         }
-         .preview-footer {
+
+        .preview-footer {
             height: 58px;
         }
 
         .preview-footer .container {
             height: 58px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 100%;
+            padding: 0 10px;
         }
+
         .preview-footer .copyright {
-    margin: 0;
-}
-
-/* Back to top - right corner */
-.preview-footer .back-to-top {
-    position: absolute;
-    right: 15px;
-    margin: 0;
-}
-        .carousel-control-prev-icon {
-            background-image: none;
+            font-size: 12px;
         }
 
-        .carousel-control-prev-icon::after {
-            content: "‹";
-            font-size: 50px;
-            color: black;
-            font-weight: bold;
+        .preview-footer .back-to-top {
+            right: 10px;
         }
 
-        .carousel-control-next-icon {
-            background-image: none;
+        .preview-footer .back-to-top a {
+            font-size: 10px;
+        }
+    }
+
+
+    /* =========================
+       VERY SMALL PHONES
+    ========================= */
+
+    @media (max-width: 400px) {
+
+        .preview-footer .copyright {
+            font-size: 5px;
         }
 
-        .carousel-control-next-icon::after {
-            content: "›";
-            font-size: 50px;
-            color: black;
-            font-weight: bold;
-        }
-        
-        /* MOBILE */
-
-        @media (max-width: 576px) {
-
-            .preview-nav {
-                height: 58px;
-                padding: 0 15px !important;
-            }
-
-            .preview-section {
-                height: calc(100vh - 116px);
-            }
-
-            .preview-image {
-                width: 90%;
-                height: calc(100vh - 160px);
-                object-fit: cover;
-            }
-
-            .preview-footer {
-                height: 58px;
-            }
-
+        .preview-footer .back-to-top a {
+            font-size: 5px;
         }
 
-    </style>
+    }
+
+</style>
 
     <title>Preview - Gallery</title>
 
@@ -193,7 +307,7 @@
     <div class="preview-section">
 
         <div id="carouselExampleControls"
-             class="carousel slide"
+             class="carousel slide mt-5 mb-4"
              data-ride="carousel">
 
             <div class="carousel-inner">
